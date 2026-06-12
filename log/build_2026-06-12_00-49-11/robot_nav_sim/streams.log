@@ -1,0 +1,23 @@
+[1.137s] Invoking command in '/home/angelina_m_simon/robot-navigation-sim/src/robot_nav_sim': PYTHONPATH=/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_nav_sim build --build-base /home/angelina_m_simon/robot-navigation-sim/build/robot_nav_sim/build install --record /home/angelina_m_simon/robot-navigation-sim/build/robot_nav_sim/install.log --single-version-externally-managed install_data
+[1.510s] running egg_info
+[1.534s] writing ../../build/robot_nav_sim/robot_nav_sim.egg-info/PKG-INFO
+[1.534s] writing dependency_links to ../../build/robot_nav_sim/robot_nav_sim.egg-info/dependency_links.txt
+[1.535s] writing entry points to ../../build/robot_nav_sim/robot_nav_sim.egg-info/entry_points.txt
+[1.535s] writing requirements to ../../build/robot_nav_sim/robot_nav_sim.egg-info/requires.txt
+[1.536s] writing top-level names to ../../build/robot_nav_sim/robot_nav_sim.egg-info/top_level.txt
+[1.583s] reading manifest file '../../build/robot_nav_sim/robot_nav_sim.egg-info/SOURCES.txt'
+[1.584s] writing manifest file '../../build/robot_nav_sim/robot_nav_sim.egg-info/SOURCES.txt'
+[1.585s] running build
+[1.585s] running build_py
+[1.585s] running install
+[1.595s] running install_lib
+[1.620s] running install_data
+[1.621s] running install_egg_info
+[1.646s] removing '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/lib/python3.12/site-packages/robot_nav_sim-0.0.0-py3.12.egg-info' (and everything under it)
+[1.647s] Copying ../../build/robot_nav_sim/robot_nav_sim.egg-info to /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/lib/python3.12/site-packages/robot_nav_sim-0.0.0-py3.12.egg-info
+[1.649s] running install_scripts
+[1.819s] Installing driver_node script to /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/lib/robot_nav_sim
+[1.820s] Installing perception_node script to /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/lib/robot_nav_sim
+[1.820s] Installing planner_node script to /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/lib/robot_nav_sim
+[1.821s] writing list of installed files to '/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_sim/install.log'
+[1.881s] Invoked command in '/home/angelina_m_simon/robot-navigation-sim/src/robot_nav_sim' returned '0': PYTHONPATH=/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_nav_sim build --build-base /home/angelina_m_simon/robot-navigation-sim/build/robot_nav_sim/build install --record /home/angelina_m_simon/robot-navigation-sim/build/robot_nav_sim/install.log --single-version-externally-managed install_data

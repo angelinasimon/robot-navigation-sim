@@ -1,0 +1,396 @@
+[0.000000] (-) TimerEvent: {}
+[0.000874] (-) JobUnselected: {'identifier': 'robot_nav_sim'}
+[0.000994] (robot_nav_interfaces) JobQueued: {'identifier': 'robot_nav_interfaces', 'dependencies': OrderedDict()}
+[0.001732] (robot_nav_interfaces) JobStarted: {'identifier': 'robot_nav_interfaces'}
+[0.016741] (robot_nav_interfaces) JobProgress: {'identifier': 'robot_nav_interfaces', 'progress': 'cmake'}
+[0.017974] (robot_nav_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/angelina_m_simon/robot-navigation-sim/src/robot_nav_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces'], 'cwd': '/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'angelina_m_simon', 'SSH_CLIENT': '35.235.241.66 45603 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/angelina_m_simon', 'OLDPWD': '/home/angelina_m_simon/robot-navigation-sim/src', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1001/bus', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'angelina_m_simon', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '31', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1001', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/tmp/ssh-OcTjixuLmj/agent.212480', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces', 'SSH_CONNECTION': '35.235.241.66 45603 10.138.0.2 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy'}), 'shell': False}
+[0.099387] (-) TimerEvent: {}
+[0.200058] (-) TimerEvent: {}
+[0.300672] (-) TimerEvent: {}
+[0.401307] (-) TimerEvent: {}
+[0.501856] (-) TimerEvent: {}
+[0.602450] (-) TimerEvent: {}
+[0.648392] (robot_nav_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.702601] (-) TimerEvent: {}
+[0.803069] (-) TimerEvent: {}
+[0.903568] (-) TimerEvent: {}
+[1.004087] (-) TimerEvent: {}
+[1.015680] (robot_nav_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[1.063850] (robot_nav_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.104290] (-) TimerEvent: {}
+[1.204746] (-) TimerEvent: {}
+[1.280825] (robot_nav_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.295622] (robot_nav_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.297158] (robot_nav_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.298581] (robot_nav_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.304915] (-) TimerEvent: {}
+[1.318605] (robot_nav_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.405111] (-) TimerEvent: {}
+[1.499835] (robot_nav_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.505297] (-) TimerEvent: {}
+[1.515589] (robot_nav_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.516286] (robot_nav_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.517427] (robot_nav_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.554772] (robot_nav_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[1.605489] (-) TimerEvent: {}
+[1.705993] (-) TimerEvent: {}
+[1.767422] (robot_nav_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.806185] (-) TimerEvent: {}
+[1.906601] (-) TimerEvent: {}
+[2.007051] (-) TimerEvent: {}
+[2.010293] (robot_nav_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[2.031107] (robot_nav_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.107249] (-) TimerEvent: {}
+[2.180358] (robot_nav_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.207407] (-) TimerEvent: {}
+[2.308098] (-) TimerEvent: {}
+[2.320487] (robot_nav_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[2.408267] (-) TimerEvent: {}
+[2.508719] (-) TimerEvent: {}
+[2.609391] (-) TimerEvent: {}
+[2.710028] (-) TimerEvent: {}
+[2.810758] (-) TimerEvent: {}
+[2.911388] (-) TimerEvent: {}
+[3.011814] (-) TimerEvent: {}
+[3.112282] (-) TimerEvent: {}
+[3.201531] (robot_nav_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[3.212550] (-) TimerEvent: {}
+[3.313034] (-) TimerEvent: {}
+[3.413501] (-) TimerEvent: {}
+[3.514104] (-) TimerEvent: {}
+[3.614632] (-) TimerEvent: {}
+[3.715138] (-) TimerEvent: {}
+[3.801350] (robot_nav_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.815355] (-) TimerEvent: {}
+[3.915829] (-) TimerEvent: {}
+[4.016536] (-) TimerEvent: {}
+[4.117261] (-) TimerEvent: {}
+[4.217911] (-) TimerEvent: {}
+[4.318418] (-) TimerEvent: {}
+[4.418868] (-) TimerEvent: {}
+[4.519295] (-) TimerEvent: {}
+[4.576861] (robot_nav_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.584113] (robot_nav_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[4.619482] (-) TimerEvent: {}
+[4.719945] (-) TimerEvent: {}
+[4.771868] (robot_nav_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[4.820126] (-) TimerEvent: {}
+[4.920581] (-) TimerEvent: {}
+[5.021033] (-) TimerEvent: {}
+[5.121707] (-) TimerEvent: {}
+[5.222490] (-) TimerEvent: {}
+[5.323237] (-) TimerEvent: {}
+[5.423806] (-) TimerEvent: {}
+[5.524375] (-) TimerEvent: {}
+[5.624837] (-) TimerEvent: {}
+[5.669570] (robot_nav_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[5.725032] (-) TimerEvent: {}
+[5.764778] (robot_nav_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[5.772039] (robot_nav_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[5.825305] (-) TimerEvent: {}
+[5.844768] (robot_nav_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[5.849696] (robot_nav_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[5.858324] (robot_nav_interfaces) StdoutLine: {'line': b'-- Configuring done (5.7s)\n'}
+[5.925484] (-) TimerEvent: {}
+[5.929348] (robot_nav_interfaces) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[5.961055] (robot_nav_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces\n'}
+[5.978667] (robot_nav_interfaces) CommandEnded: {'returncode': 0}
+[5.981241] (robot_nav_interfaces) JobProgress: {'identifier': 'robot_nav_interfaces', 'progress': 'build'}
+[5.981353] (robot_nav_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces', '--', '-j2', '-l2'], 'cwd': '/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'angelina_m_simon', 'SSH_CLIENT': '35.235.241.66 45603 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/angelina_m_simon', 'OLDPWD': '/home/angelina_m_simon/robot-navigation-sim/src', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1001/bus', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'angelina_m_simon', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '31', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1001', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/tmp/ssh-OcTjixuLmj/agent.212480', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces', 'SSH_CONNECTION': '35.235.241.66 45603 10.138.0.2 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy'}), 'shell': False}
+[6.025682] (-) TimerEvent: {}
+[6.085311] (robot_nav_interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating Rust code for ROS interfaces\x1b[0m\n'}
+[6.088330] (robot_nav_interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[6.125828] (-) TimerEvent: {}
+[6.227306] (-) TimerEvent: {}
+[6.328271] (-) TimerEvent: {}
+[6.428727] (-) TimerEvent: {}
+[6.531470] (-) TimerEvent: {}
+[6.597908] (robot_nav_interfaces) StdoutLine: {'line': b'[  5%] Built target robot_nav_interfaces__rosidl_generator_type_description\n'}
+[6.631640] (-) TimerEvent: {}
+[6.661112] (robot_nav_interfaces) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_robot_nav_interfaces\n'}
+[6.698892] (robot_nav_interfaces) StdoutLine: {'line': b'[  5%] Built target robot_nav_interfaces__rs\n'}
+[6.701317] (robot_nav_interfaces) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[6.731779] (-) TimerEvent: {}
+[6.746084] (robot_nav_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[6.831927] (-) TimerEvent: {}
+[6.933584] (-) TimerEvent: {}
+[7.034249] (-) TimerEvent: {}
+[7.136451] (-) TimerEvent: {}
+[7.237056] (-) TimerEvent: {}
+[7.339465] (-) TimerEvent: {}
+[7.431354] (robot_nav_interfaces) StdoutLine: {'line': b'[ 11%] Built target robot_nav_interfaces__cpp\n'}
+[7.441291] (-) TimerEvent: {}
+[7.479156] (robot_nav_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/robot_nav_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_nav_interfaces/msg/detail/detection__description.c.o\x1b[0m\n'}
+[7.541451] (-) TimerEvent: {}
+[7.642666] (-) TimerEvent: {}
+[7.645481] (robot_nav_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/robot_nav_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_nav_interfaces/msg/detail/detection__functions.c.o\x1b[0m\n'}
+[7.742807] (-) TimerEvent: {}
+[7.802347] (robot_nav_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/robot_nav_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_nav_interfaces/msg/detail/detection__type_support.c.o\x1b[0m\n'}
+[7.843275] (-) TimerEvent: {}
+[7.874406] (robot_nav_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library librobot_nav_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[7.928993] (robot_nav_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[7.933328] (robot_nav_interfaces) StdoutLine: {'line': b'creating robot_nav_interfaces.egg-info\n'}
+[7.947115] (-) TimerEvent: {}
+[7.965492] (robot_nav_interfaces) StdoutLine: {'line': b'[ 22%] Built target robot_nav_interfaces__rosidl_generator_c\n'}
+[7.989891] (robot_nav_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[7.995482] (robot_nav_interfaces) StdoutLine: {'line': b'writing robot_nav_interfaces.egg-info/PKG-INFO\n'}
+[7.996701] (robot_nav_interfaces) StdoutLine: {'line': b'writing dependency_links to robot_nav_interfaces.egg-info/dependency_links.txt\n'}
+[7.998301] (robot_nav_interfaces) StdoutLine: {'line': b'writing top-level names to robot_nav_interfaces.egg-info/top_level.txt\n'}
+[7.998586] (robot_nav_interfaces) StdoutLine: {'line': b"writing manifest file 'robot_nav_interfaces.egg-info/SOURCES.txt'\n"}
+[8.047263] (-) TimerEvent: {}
+[8.126503] (robot_nav_interfaces) StdoutLine: {'line': b"reading manifest file 'robot_nav_interfaces.egg-info/SOURCES.txt'\n"}
+[8.128424] (robot_nav_interfaces) StdoutLine: {'line': b"writing manifest file 'robot_nav_interfaces.egg-info/SOURCES.txt'\n"}
+[8.147404] (-) TimerEvent: {}
+[8.209722] (robot_nav_interfaces) StdoutLine: {'line': b'[ 25%] Built target ament_cmake_python_build_robot_nav_interfaces_egg\n'}
+[8.232663] (robot_nav_interfaces) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[8.248279] (-) TimerEvent: {}
+[8.348775] (-) TimerEvent: {}
+[8.451591] (-) TimerEvent: {}
+[8.552283] (-) TimerEvent: {}
+[8.602623] (robot_nav_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/robot_nav_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_nav_interfaces/msg/detection__type_support.cpp.o\x1b[0m\n'}
+[8.653293] (-) TimerEvent: {}
+[8.743533] (robot_nav_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32m\x1b[1mLinking CXX shared library librobot_nav_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[8.754280] (-) TimerEvent: {}
+[8.847384] (robot_nav_interfaces) StdoutLine: {'line': b'[ 34%] Built target robot_nav_interfaces__rosidl_typesupport_c\n'}
+[8.854441] (-) TimerEvent: {}
+[8.868693] (robot_nav_interfaces) StdoutLine: {'line': b'[ 37%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[8.955279] (-) TimerEvent: {}
+[8.966280] (robot_nav_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/robot_nav_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_nav_interfaces/msg/detail/dds_fastrtps/detection__type_support.cpp.o\x1b[0m\n'}
+[9.055445] (-) TimerEvent: {}
+[9.155890] (-) TimerEvent: {}
+[9.257317] (-) TimerEvent: {}
+[9.358245] (-) TimerEvent: {}
+[9.452292] (robot_nav_interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/robot_nav_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_nav_interfaces/msg/detail/detection__type_support.cpp.o\x1b[0m\n'}
+[9.458411] (-) TimerEvent: {}
+[9.558885] (-) TimerEvent: {}
+[9.659671] (-) TimerEvent: {}
+[9.761317] (-) TimerEvent: {}
+[9.862287] (-) TimerEvent: {}
+[9.963476] (-) TimerEvent: {}
+[10.066556] (-) TimerEvent: {}
+[10.167160] (-) TimerEvent: {}
+[10.268074] (-) TimerEvent: {}
+[10.370497] (-) TimerEvent: {}
+[10.428619] (robot_nav_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32m\x1b[1mLinking CXX shared library librobot_nav_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[10.470679] (-) TimerEvent: {}
+[10.573523] (-) TimerEvent: {}
+[10.598765] (robot_nav_interfaces) StdoutLine: {'line': b'[ 45%] Built target robot_nav_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[10.621127] (robot_nav_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[10.650013] (robot_nav_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library librobot_nav_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[10.673657] (-) TimerEvent: {}
+[10.775393] (-) TimerEvent: {}
+[10.848141] (robot_nav_interfaces) StdoutLine: {'line': b'[ 51%] Built target robot_nav_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[10.870122] (robot_nav_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[10.876282] (-) TimerEvent: {}
+[10.976705] (-) TimerEvent: {}
+[11.078464] (-) TimerEvent: {}
+[11.179068] (-) TimerEvent: {}
+[11.207604] (robot_nav_interfaces) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/robot_nav_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_nav_interfaces/msg/detection__type_support.cpp.o\x1b[0m\n'}
+[11.279245] (-) TimerEvent: {}
+[11.379773] (-) TimerEvent: {}
+[11.482497] (-) TimerEvent: {}
+[11.567950] (robot_nav_interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/robot_nav_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_nav_interfaces/msg/detail/detection__type_support_c.cpp.o\x1b[0m\n'}
+[11.582662] (-) TimerEvent: {}
+[11.684527] (-) TimerEvent: {}
+[11.787303] (-) TimerEvent: {}
+[11.887820] (-) TimerEvent: {}
+[11.958793] (robot_nav_interfaces) StdoutLine: {'line': b'[ 62%] \x1b[32m\x1b[1mLinking CXX shared library librobot_nav_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[11.988024] (-) TimerEvent: {}
+[12.057326] (robot_nav_interfaces) StdoutLine: {'line': b'[ 62%] Built target robot_nav_interfaces__rosidl_typesupport_cpp\n'}
+[12.079839] (robot_nav_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[12.088198] (-) TimerEvent: {}
+[12.190277] (-) TimerEvent: {}
+[12.290747] (-) TimerEvent: {}
+[12.392473] (-) TimerEvent: {}
+[12.493021] (-) TimerEvent: {}
+[12.595488] (-) TimerEvent: {}
+[12.679325] (robot_nav_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding C object CMakeFiles/robot_nav_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_nav_interfaces/msg/detail/detection__type_support.c.o\x1b[0m\n'}
+[12.695671] (-) TimerEvent: {}
+[12.716411] (robot_nav_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library librobot_nav_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[12.771197] (robot_nav_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking C shared library librobot_nav_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[12.795835] (-) TimerEvent: {}
+[12.843461] (robot_nav_interfaces) StdoutLine: {'line': b'[ 74%] Built target robot_nav_interfaces__rosidl_typesupport_introspection_c\n'}
+[12.894369] (robot_nav_interfaces) StdoutLine: {'line': b'[ 74%] Built target robot_nav_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[12.896010] (-) TimerEvent: {}
+[12.928773] (robot_nav_interfaces) StdoutLine: {'line': b'[ 74%] Built target robot_nav_interfaces\n'}
+[12.963470] (robot_nav_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[12.996224] (-) TimerEvent: {}
+[13.096850] (-) TimerEvent: {}
+[13.197661] (-) TimerEvent: {}
+[13.298145] (-) TimerEvent: {}
+[13.398740] (-) TimerEvent: {}
+[13.429322] (robot_nav_interfaces) StdoutLine: {'line': b'[ 77%] Built target robot_nav_interfaces__py\n'}
+[13.462944] (robot_nav_interfaces) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding C object CMakeFiles/robot_nav_interfaces__rosidl_generator_py.dir/rosidl_generator_py/robot_nav_interfaces/msg/_detection_s.c.o\x1b[0m\n'}
+[13.498936] (-) TimerEvent: {}
+[13.599476] (-) TimerEvent: {}
+[13.700256] (-) TimerEvent: {}
+[13.800750] (-) TimerEvent: {}
+[13.802648] (robot_nav_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking C shared library librobot_nav_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[13.869769] (robot_nav_interfaces) StdoutLine: {'line': b'[ 82%] Built target robot_nav_interfaces__rosidl_generator_py\n'}
+[13.901234] (-) TimerEvent: {}
+[13.916765] (robot_nav_interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/robot_nav_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/robot_nav_interfaces/_robot_nav_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[13.917226] (robot_nav_interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/robot_nav_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/robot_nav_interfaces/_robot_nav_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[14.002298] (-) TimerEvent: {}
+[14.102796] (-) TimerEvent: {}
+[14.182434] (robot_nav_interfaces) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/robot_nav_interfaces/robot_nav_interfaces_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[14.200365] (robot_nav_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/robot_nav_interfaces/robot_nav_interfaces_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[14.202942] (-) TimerEvent: {}
+[14.257075] (robot_nav_interfaces) StdoutLine: {'line': b'[ 94%] Built target robot_nav_interfaces_s__rosidl_typesupport_introspection_c\n'}
+[14.274669] (robot_nav_interfaces) StdoutLine: {'line': b'[ 94%] Built target robot_nav_interfaces_s__rosidl_typesupport_fastrtps_c\n'}
+[14.295377] (robot_nav_interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding C object CMakeFiles/robot_nav_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/robot_nav_interfaces/_robot_nav_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[14.303148] (-) TimerEvent: {}
+[14.403873] (-) TimerEvent: {}
+[14.456305] (robot_nav_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/robot_nav_interfaces/robot_nav_interfaces_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[14.504052] (-) TimerEvent: {}
+[14.507292] (robot_nav_interfaces) StdoutLine: {'line': b'[100%] Built target robot_nav_interfaces_s__rosidl_typesupport_c\n'}
+[14.527056] (robot_nav_interfaces) CommandEnded: {'returncode': 0}
+[14.528483] (robot_nav_interfaces) JobProgress: {'identifier': 'robot_nav_interfaces', 'progress': 'install'}
+[14.544030] (robot_nav_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces'], 'cwd': '/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'angelina_m_simon', 'SSH_CLIENT': '35.235.241.66 45603 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/angelina_m_simon', 'OLDPWD': '/home/angelina_m_simon/robot-navigation-sim/src', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1001/bus', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'angelina_m_simon', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '31', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1001', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/tmp/ssh-OcTjixuLmj/agent.212480', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces', 'SSH_CONNECTION': '35.235.241.66 45603 10.138.0.2 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy'}), 'shell': False}
+[14.559729] (robot_nav_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[14.560338] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/ament_index/resource_index/rosidl_interfaces/robot_nav_interfaces\n'}
+[14.560876] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/msg/Detection.json\n'}
+[14.561418] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces\n'}
+[14.561815] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg\n'}
+[14.562227] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail\n'}
+[14.562502] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail/detection__description.c\n'}
+[14.562859] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail/detection__type_support.h\n'}
+[14.563158] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail/detection__functions.h\n'}
+[14.563537] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail/detection__functions.c\n'}
+[14.563857] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail/detection__type_support.c\n'}
+[14.564172] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail/detection__struct.h\n'}
+[14.564523] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detection.h\n'}
+[14.564829] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[14.565056] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/environment/library_path.sh\n'}
+[14.565382] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/environment/library_path.dsv\n'}
+[14.565719] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/librobot_nav_interfaces__rosidl_generator_c.so\n'}
+[14.566552] (robot_nav_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/librobot_nav_interfaces__rosidl_generator_c.so" to ""\n'}
+[14.567020] (robot_nav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces\n'}
+[14.567329] (robot_nav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg\n'}
+[14.567550] (robot_nav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail\n'}
+[14.567908] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail/detection__rosidl_typesupport_fastrtps_c.h\n'}
+[14.568106] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[14.568358] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/librobot_nav_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[14.568795] (robot_nav_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/librobot_nav_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[14.569212] (robot_nav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces\n'}
+[14.569531] (robot_nav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg\n'}
+[14.569830] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[14.570067] (robot_nav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail\n'}
+[14.570412] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail/detection__rosidl_typesupport_introspection_c.h\n'}
+[14.570646] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail/detection__type_support.c\n'}
+[14.570860] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/librobot_nav_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[14.571116] (robot_nav_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/librobot_nav_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[14.571413] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/librobot_nav_interfaces__rosidl_typesupport_c.so\n'}
+[14.572069] (robot_nav_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/librobot_nav_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[14.572487] (robot_nav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces\n'}
+[14.572837] (robot_nav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg\n'}
+[14.573207] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[14.573620] (robot_nav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail\n'}
+[14.573952] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail/detection__type_support.hpp\n'}
+[14.574153] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail/detection__struct.hpp\n'}
+[14.574591] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail/detection__builder.hpp\n'}
+[14.574907] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail/detection__traits.hpp\n'}
+[14.575245] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detection.hpp\n'}
+[14.575577] (robot_nav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces\n'}
+[14.575773] (robot_nav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg\n'}
+[14.576017] (robot_nav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail\n'}
+[14.576251] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail/dds_fastrtps\n'}
+[14.576582] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail/detection__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[14.576971] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[14.577238] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/librobot_nav_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[14.577436] (robot_nav_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/librobot_nav_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[14.577774] (robot_nav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces\n'}
+[14.577987] (robot_nav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg\n'}
+[14.578325] (robot_nav_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail\n'}
+[14.578528] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail/detection__type_support.cpp\n'}
+[14.578734] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/include/robot_nav_interfaces/robot_nav_interfaces/msg/detail/detection__rosidl_typesupport_introspection_cpp.hpp\n'}
+[14.578932] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/librobot_nav_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[14.579298] (robot_nav_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/librobot_nav_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[14.579545] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/librobot_nav_interfaces__rosidl_typesupport_cpp.so\n'}
+[14.579867] (robot_nav_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/librobot_nav_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[14.580231] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/environment/pythonpath.sh\n'}
+[14.580523] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/environment/pythonpath.dsv\n'}
+[14.580876] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces-0.0.0-py3.12.egg-info\n'}
+[14.581221] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[14.581603] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[14.581858] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[14.582284] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[14.582543] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces\n'}
+[14.582860] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/msg\n'}
+[14.583244] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/msg/__init__.py\n'}
+[14.583604] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/msg/_detection.py\n'}
+[14.583922] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/msg/_detection_s.c\n'}
+[14.584298] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/_robot_nav_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[14.584645] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/__init__.py\n'}
+[14.584895] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/robot_nav_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[14.585328] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/_robot_nav_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[14.585579] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/robot_nav_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[14.585770] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/_robot_nav_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[14.585955] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/robot_nav_interfaces_s__rosidl_typesupport_c.so\n'}
+[14.604263] (-) TimerEvent: {}
+[14.649616] (robot_nav_interfaces) StdoutLine: {'line': b"Listing '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces'...\n"}
+[14.649949] (robot_nav_interfaces) StdoutLine: {'line': b"Compiling '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/__init__.py'...\n"}
+[14.650101] (robot_nav_interfaces) StdoutLine: {'line': b"Listing '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/msg'...\n"}
+[14.650304] (robot_nav_interfaces) StdoutLine: {'line': b"Compiling '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/msg/__init__.py'...\n"}
+[14.650450] (robot_nav_interfaces) StdoutLine: {'line': b"Compiling '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/msg/_detection.py'...\n"}
+[14.661408] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/robot_nav_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[14.662324] (robot_nav_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/robot_nav_interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[14.662737] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/robot_nav_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[14.663455] (robot_nav_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/robot_nav_interfaces_s__rosidl_typesupport_introspection_c.so" to ""\n'}
+[14.664015] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/robot_nav_interfaces_s__rosidl_typesupport_c.so\n'}
+[14.664804] (robot_nav_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages/robot_nav_interfaces/robot_nav_interfaces_s__rosidl_typesupport_c.so" to ""\n'}
+[14.665144] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/librobot_nav_interfaces__rosidl_generator_py.so\n'}
+[14.665871] (robot_nav_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/librobot_nav_interfaces__rosidl_generator_py.so" to ""\n'}
+[14.666259] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/ament_index/resource_index/rust_packages/robot_nav_interfaces\n'}
+[14.666595] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/rust\n'}
+[14.666976] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/rust/src\n'}
+[14.667352] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/rust/src/msg\n'}
+[14.667653] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/rust/src/msg/rmw.rs\n'}
+[14.668154] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/rust/src/msg.rs\n'}
+[14.668457] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/rust/src/lib.rs\n'}
+[14.668793] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/rust/Cargo.toml\n'}
+[14.669105] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/rust/build.rs\n'}
+[14.669387] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/msg/Detection.idl\n'}
+[14.669641] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/msg/Detection.msg\n'}
+[14.669991] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/ament_index/resource_index/package_run_dependencies/robot_nav_interfaces\n'}
+[14.670247] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/ament_index/resource_index/parent_prefix_path/robot_nav_interfaces\n'}
+[14.670575] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/environment/ament_prefix_path.sh\n'}
+[14.670882] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/environment/ament_prefix_path.dsv\n'}
+[14.671243] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/environment/path.sh\n'}
+[14.671554] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/environment/path.dsv\n'}
+[14.671880] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/local_setup.bash\n'}
+[14.672311] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/local_setup.sh\n'}
+[14.672701] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/local_setup.zsh\n'}
+[14.673011] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/local_setup.dsv\n'}
+[14.673486] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/package.dsv\n'}
+[14.673950] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/ament_index/resource_index/packages/robot_nav_interfaces\n'}
+[14.674411] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/export_robot_nav_interfaces__rosidl_generator_cExport.cmake\n'}
+[14.674773] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/export_robot_nav_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[14.675307] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/export_robot_nav_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[14.675706] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/export_robot_nav_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[14.676129] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/robot_nav_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[14.676553] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/robot_nav_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[14.676913] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/robot_nav_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[14.677252] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/robot_nav_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[14.677736] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/export_robot_nav_interfaces__rosidl_generator_cppExport.cmake\n'}
+[14.678070] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/export_robot_nav_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[14.678518] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/export_robot_nav_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[14.678869] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/robot_nav_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[14.679223] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/robot_nav_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[14.679596] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/robot_nav_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[14.679935] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/robot_nav_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[14.680340] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/export_robot_nav_interfaces__rosidl_generator_pyExport.cmake\n'}
+[14.680655] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/export_robot_nav_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[14.681073] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[14.681504] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[14.681870] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[14.682198] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[14.682541] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[14.682936] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[14.683279] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[14.683739] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/robot_nav_interfacesConfig.cmake\n'}
+[14.684072] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/cmake/robot_nav_interfacesConfig-version.cmake\n'}
+[14.684476] (robot_nav_interfaces) StdoutLine: {'line': b'-- Installing: /home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/package.xml\n'}
+[14.689390] (robot_nav_interfaces) CommandEnded: {'returncode': 0}
+[14.704522] (-) TimerEvent: {}
+[14.732340] (robot_nav_interfaces) JobEnded: {'identifier': 'robot_nav_interfaces', 'rc': 0}
+[14.733994] (-) EventReactorShutdown: {}

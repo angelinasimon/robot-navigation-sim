@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from robot_nav_interfaces/msg/Detection.msg
+// generated code does not contain a copyright notice
+
+
+module robot_nav_interfaces {
+  module msg {
+    struct Detection {
+      string class_name;
+
+      int32 x_min;
+
+      int32 y_min;
+
+      int32 x_max;
+
+      int32 y_max;
+
+      float confidence;
+
+      float distance_m;
+    };
+  };
+};

@@ -1,0 +1,4 @@
+[console_scripts]
+perception_node = robot_nav_sim.perception_node:main
+planner_node = robot_nav_sim.planner_node:main
+robot_driver = robot_nav_sim.robot_driver:main

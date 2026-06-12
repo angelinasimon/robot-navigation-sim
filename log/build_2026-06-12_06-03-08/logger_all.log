@@ -1,0 +1,232 @@
+[0.188s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.188s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=2, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x79751426cce0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x797514390c50>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x797514390c50>>, mixin_verb=('build',))
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.266s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.266s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.266s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.266s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.266s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.266s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/angelina_m_simon/robot-navigation-sim'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['ignore', 'ignore_ament_install']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ignore'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ignore_ament_install'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['colcon_pkg']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'colcon_pkg'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['colcon_meta']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'colcon_meta'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['ros']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ros'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['cmake', 'python']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'cmake'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'python'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['python_setup_py']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'python_setup_py'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(notes) by extensions ['ignore', 'ignore_ament_install']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(notes) by extension 'ignore'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(notes) by extension 'ignore_ament_install'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(notes) by extensions ['colcon_pkg']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(notes) by extension 'colcon_pkg'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(notes) by extensions ['colcon_meta']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(notes) by extension 'colcon_meta'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(notes) by extensions ['ros']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(notes) by extension 'ros'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(notes) by extensions ['cmake', 'python']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(notes) by extension 'cmake'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(notes) by extension 'python'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(notes) by extensions ['python_setup_py']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(notes) by extension 'python_setup_py'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_interfaces) by extension 'ignore'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_interfaces) by extension 'ignore_ament_install'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_interfaces) by extensions ['colcon_pkg']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_interfaces) by extension 'colcon_pkg'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_interfaces) by extensions ['colcon_meta']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_interfaces) by extension 'colcon_meta'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_interfaces) by extensions ['ros']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_interfaces) by extension 'ros'
+[0.324s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_nav_interfaces' with type 'ros.ament_cmake' and name 'robot_nav_interfaces'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_sim) by extensions ['ignore', 'ignore_ament_install']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_sim) by extension 'ignore'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_sim) by extension 'ignore_ament_install'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_sim) by extensions ['colcon_pkg']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_sim) by extension 'colcon_pkg'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_sim) by extensions ['colcon_meta']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_sim) by extension 'colcon_meta'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_sim) by extensions ['ros']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_nav_sim) by extension 'ros'
+[0.326s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_nav_sim' with type 'ros.ament_python' and name 'robot_nav_sim'
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.355s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.355s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.357s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/angelina_m_simon/robot-navigation-sim/install
+[0.359s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 197 installed packages in /opt/ros/jazzy
+[0.360s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.408s] DEBUG:colcon.colcon_core.verb:Building package 'robot_nav_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces', 'merge_install': False, 'path': '/home/angelina_m_simon/robot-navigation-sim/src/robot_nav_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_sim' build argument 'cmake_args' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_sim' build argument 'cmake_target' from command line to 'None'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_sim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_sim' build argument 'cmake_clean_cache' from command line to 'False'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_sim' build argument 'cmake_clean_first' from command line to 'False'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_sim' build argument 'cmake_force_configure' from command line to 'False'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_sim' build argument 'ament_cmake_args' from command line to 'None'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_sim' build argument 'catkin_cmake_args' from command line to 'None'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'robot_nav_sim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.409s] DEBUG:colcon.colcon_core.verb:Building package 'robot_nav_sim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_sim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim', 'merge_install': False, 'path': '/home/angelina_m_simon/robot-navigation-sim/src/robot_nav_sim', 'symlink_install': False, 'test_result_base': None}
+[0.409s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.411s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.411s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/angelina_m_simon/robot-navigation-sim/src/robot_nav_interfaces' with build type 'ament_cmake'
+[0.412s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/angelina_m_simon/robot-navigation-sim/src/robot_nav_interfaces'
+[0.415s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.416s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.416s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.431s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim:/opt/ros/jazzy /usr/bin/cmake --build /home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces -- -j2 -l2
+[1.397s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim:/opt/ros/jazzy /usr/bin/cmake --build /home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces -- -j2 -l2
+[1.415s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim:/opt/ros/jazzy /usr/bin/cmake --install /home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces
+[1.530s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_nav_interfaces)
+[1.533s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim:/opt/ros/jazzy /usr/bin/cmake --install /home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces
+[1.536s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces' for CMake module files
+[1.537s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces' for CMake config files
+[1.538s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_nav_interfaces', 'cmake_prefix_path')
+[1.538s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/cmake_prefix_path.ps1'
+[1.539s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/cmake_prefix_path.dsv'
+[1.539s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/cmake_prefix_path.sh'
+[1.541s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib'
+[1.541s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_nav_interfaces', 'ld_library_path_lib')
+[1.541s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/ld_library_path_lib.ps1'
+[1.542s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/ld_library_path_lib.dsv'
+[1.543s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/ld_library_path_lib.sh'
+[1.543s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/bin'
+[1.543s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/pkgconfig/robot_nav_interfaces.pc'
+[1.544s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages'
+[1.544s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_nav_interfaces', 'pythonpath')
+[1.544s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/pythonpath.ps1'
+[1.545s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/pythonpath.dsv'
+[1.545s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/pythonpath.sh'
+[1.546s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/bin'
+[1.547s] INFO:colcon.colcon_core.shell:Creating package script '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/package.ps1'
+[1.548s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/package.dsv'
+[1.549s] INFO:colcon.colcon_core.shell:Creating package script '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/package.sh'
+[1.550s] INFO:colcon.colcon_core.shell:Creating package script '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/package.bash'
+[1.551s] INFO:colcon.colcon_core.shell:Creating package script '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/package.zsh'
+[1.552s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/colcon-core/packages/robot_nav_interfaces)
+[1.553s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_nav_interfaces)
+[1.554s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces' for CMake module files
+[1.554s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces' for CMake config files
+[1.555s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_nav_interfaces', 'cmake_prefix_path')
+[1.555s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/cmake_prefix_path.ps1'
+[1.556s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/cmake_prefix_path.dsv'
+[1.556s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/cmake_prefix_path.sh'
+[1.557s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib'
+[1.558s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_nav_interfaces', 'ld_library_path_lib')
+[1.558s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/ld_library_path_lib.ps1'
+[1.558s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/ld_library_path_lib.dsv'
+[1.559s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/ld_library_path_lib.sh'
+[1.560s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/bin'
+[1.560s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/pkgconfig/robot_nav_interfaces.pc'
+[1.560s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages'
+[1.560s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_nav_interfaces', 'pythonpath')
+[1.561s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/pythonpath.ps1'
+[1.561s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/pythonpath.dsv'
+[1.562s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/hook/pythonpath.sh'
+[1.563s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/bin'
+[1.563s] INFO:colcon.colcon_core.shell:Creating package script '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/package.ps1'
+[1.564s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/package.dsv'
+[1.565s] INFO:colcon.colcon_core.shell:Creating package script '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/package.sh'
+[1.566s] INFO:colcon.colcon_core.shell:Creating package script '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/package.bash'
+[1.566s] INFO:colcon.colcon_core.shell:Creating package script '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/robot_nav_interfaces/package.zsh'
+[1.567s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/share/colcon-core/packages/robot_nav_interfaces)
+[1.568s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/angelina_m_simon/robot-navigation-sim/src/robot_nav_sim' with build type 'ament_python'
+[1.568s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_nav_sim', 'ament_prefix_path')
+[1.569s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/share/robot_nav_sim/hook/ament_prefix_path.ps1'
+[1.570s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/share/robot_nav_sim/hook/ament_prefix_path.dsv'
+[1.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/share/robot_nav_sim/hook/ament_prefix_path.sh'
+[1.572s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.572s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.904s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/angelina_m_simon/robot-navigation-sim/src/robot_nav_sim'
+[1.904s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.904s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.690s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/angelina_m_simon/robot-navigation-sim/src/robot_nav_sim': PYTHONPATH=/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/lib/python3.12/site-packages:/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages:/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_nav_sim build --build-base /home/angelina_m_simon/robot-navigation-sim/build/robot_nav_sim/build install --record /home/angelina_m_simon/robot-navigation-sim/build/robot_nav_sim/install.log --single-version-externally-managed install_data
+[3.447s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim' for CMake module files
+[3.448s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/angelina_m_simon/robot-navigation-sim/src/robot_nav_sim' returned '0': PYTHONPATH=/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/lib/python3.12/site-packages:/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_interfaces/lib/python3.12/site-packages:/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_nav_sim build --build-base /home/angelina_m_simon/robot-navigation-sim/build/robot_nav_sim/build install --record /home/angelina_m_simon/robot-navigation-sim/build/robot_nav_sim/install.log --single-version-externally-managed install_data
+[3.449s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim' for CMake config files
+[3.450s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/lib'
+[3.450s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/bin'
+[3.450s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/lib/pkgconfig/robot_nav_sim.pc'
+[3.450s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/lib/python3.12/site-packages'
+[3.450s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_nav_sim', 'pythonpath')
+[3.451s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/share/robot_nav_sim/hook/pythonpath.ps1'
+[3.451s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/share/robot_nav_sim/hook/pythonpath.dsv'
+[3.452s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/share/robot_nav_sim/hook/pythonpath.sh'
+[3.453s] Level 1:colcon.colcon_core.environment:checking '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/bin'
+[3.453s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_nav_sim)
+[3.454s] INFO:colcon.colcon_core.shell:Creating package script '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/share/robot_nav_sim/package.ps1'
+[3.455s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/share/robot_nav_sim/package.dsv'
+[3.456s] INFO:colcon.colcon_core.shell:Creating package script '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/share/robot_nav_sim/package.sh'
+[3.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/share/robot_nav_sim/package.bash'
+[3.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/share/robot_nav_sim/package.zsh'
+[3.458s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/angelina_m_simon/robot-navigation-sim/install/robot_nav_sim/share/colcon-core/packages/robot_nav_sim)
+[3.458s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.459s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.459s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.459s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.461s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.461s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/angelina_m_simon/robot-navigation-sim/install/local_setup.ps1'
+[3.463s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/angelina_m_simon/robot-navigation-sim/install/_local_setup_util_ps1.py'
+[3.464s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/angelina_m_simon/robot-navigation-sim/install/setup.ps1'
+[3.466s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/angelina_m_simon/robot-navigation-sim/install/local_setup.sh'
+[3.467s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/angelina_m_simon/robot-navigation-sim/install/_local_setup_util_sh.py'
+[3.468s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/angelina_m_simon/robot-navigation-sim/install/setup.sh'
+[3.469s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/angelina_m_simon/robot-navigation-sim/install/local_setup.bash'
+[3.470s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/angelina_m_simon/robot-navigation-sim/install/setup.bash'
+[3.471s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/angelina_m_simon/robot-navigation-sim/install/local_setup.zsh'
+[3.472s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/angelina_m_simon/robot-navigation-sim/install/setup.zsh'

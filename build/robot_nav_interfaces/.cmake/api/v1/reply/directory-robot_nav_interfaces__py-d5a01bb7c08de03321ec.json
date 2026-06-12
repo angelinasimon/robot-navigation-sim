@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "robot_nav_interfaces__py",
+		"source" : "/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces/robot_nav_interfaces__py"
+	}
+}

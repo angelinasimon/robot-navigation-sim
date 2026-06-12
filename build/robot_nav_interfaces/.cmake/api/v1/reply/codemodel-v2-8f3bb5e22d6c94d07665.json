@@ -1,0 +1,267 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-7ab65c628354bedbfcfc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				},
+				{
+					"build" : "robot_nav_interfaces__py",
+					"jsonFile" : "directory-robot_nav_interfaces__py-d5a01bb7c08de03321ec.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces/robot_nav_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "robot_nav_interfaces__rs",
+					"jsonFile" : "directory-robot_nav_interfaces__rs-638dc39bdce05aeaf1d8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces/robot_nav_interfaces__rs",
+					"targetIndexes" : 
+					[
+						14
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "robot_nav_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_robot_nav_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_robot_nav_interfaces_egg-072585a8c7d369a3e9ae.json",
+					"name" : "ament_cmake_python_build_robot_nav_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_robot_nav_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_robot_nav_interfaces-b16fc47813befcc624f0.json",
+					"name" : "ament_cmake_python_copy_robot_nav_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_nav_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_nav_interfaces-6b78d7736be62429a450.json",
+					"name" : "robot_nav_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_nav_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_nav_interfaces__cpp-77ab14f4c7af0675088a.json",
+					"name" : "robot_nav_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "robot_nav_interfaces__py::@fce2d12dd19e0f6ac62a",
+					"jsonFile" : "target-robot_nav_interfaces__py-275418ea545ea2bb3bf5.json",
+					"name" : "robot_nav_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_nav_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_nav_interfaces__rosidl_generator_c-f66f899a0da4c47f5c23.json",
+					"name" : "robot_nav_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_nav_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_nav_interfaces__rosidl_generator_py-51d681015aeeb479a871.json",
+					"name" : "robot_nav_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_nav_interfaces__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_nav_interfaces__rosidl_generator_type_description-e12819fc11371c9b4257.json",
+					"name" : "robot_nav_interfaces__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_nav_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_nav_interfaces__rosidl_typesupport_c-0580d8753314fc3e75ab.json",
+					"name" : "robot_nav_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_nav_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_nav_interfaces__rosidl_typesupport_cpp-aabc098a95a017b0ca90.json",
+					"name" : "robot_nav_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_nav_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_nav_interfaces__rosidl_typesupport_fastrtps_c-5319c97aa28f4ab23e00.json",
+					"name" : "robot_nav_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_nav_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_nav_interfaces__rosidl_typesupport_fastrtps_cpp-ec0fbb7d816133847ce7.json",
+					"name" : "robot_nav_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_nav_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_nav_interfaces__rosidl_typesupport_introspection_c-baf2c8fa3a12a0d5a6f8.json",
+					"name" : "robot_nav_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_nav_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_nav_interfaces__rosidl_typesupport_introspection_cpp-4480b433be4e40a8115d.json",
+					"name" : "robot_nav_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "robot_nav_interfaces__rs::@04b1ecb607a514b9cf23",
+					"jsonFile" : "target-robot_nav_interfaces__rs-88979cbe5e78ff47195e.json",
+					"name" : "robot_nav_interfaces__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_nav_interfaces_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_nav_interfaces_s__rosidl_typesupport_c-6860a41d11b052617dac.json",
+					"name" : "robot_nav_interfaces_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_nav_interfaces_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_nav_interfaces_s__rosidl_typesupport_fastrtps_c-fb6bb9e764526750d53f.json",
+					"name" : "robot_nav_interfaces_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_nav_interfaces_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_nav_interfaces_s__rosidl_typesupport_introspection_c-360173452962ef6432ad.json",
+					"name" : "robot_nav_interfaces_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_nav_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_nav_interfaces_uninstall-b47dd1528a5c53125810.json",
+					"name" : "robot_nav_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-d09b6a91f7ce47240948.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces",
+		"source" : "/home/angelina_m_simon/robot-navigation-sim/src/robot_nav_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
