@@ -1,7 +1,0 @@
-{
-  "package_name": "robot_nav_interfaces",
-  "output_dir": "/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces/rosidl_generator_type_description/robot_nav_interfaces",
-  "idl_tuples": [
-    "/home/angelina_m_simon/robot-navigation-sim/build/robot_nav_interfaces/rosidl_adapter/robot_nav_interfaces:msg/Detection.idl"
-  ]
-}
