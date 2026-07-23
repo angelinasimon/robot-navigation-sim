@@ -1,0 +1,2 @@
+trial_id,scenario_type,start_x,start_y,start_yaw,goal_x,goal_y,obstacle_x,obstacle_y,detected_obstacle,first_detection_time_s,min_distance_to_obstacle_m,success,collision,timeout,time_to_goal_s,notes
+avoidance_001,easy_straight,-1.9311140683764272e-07,6.374429555953559e-10,0.0,5.0,0.0,2.5,0.0,True,4.382303237915039,0.32949867622411577,False,,True,30.051953554153442,

@@ -10,6 +10,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name + '/launch', ['launch/system.launch.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -27,6 +28,7 @@ setup(
         'planner_node = robot_nav_sim.planner_node:main',
         'perception_node = robot_nav_sim.perception_node:main',
         'robot_driver = robot_nav_sim.robot_driver:main',
+        'eval_logger_node = robot_nav_sim.eval_logger_node:main',
     ],
 },
 )

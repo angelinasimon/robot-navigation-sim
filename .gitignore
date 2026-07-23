@@ -1,3 +1,18 @@
 build/
 install/
+logs/
 log/
+# Generated camera and evaluation images
+data/images/
+results/
+outputs/
+left*.jpg
+*_annotated.jpg
+build/
+install/
+log/
+
+log/
+logs/
+build/
+install/
