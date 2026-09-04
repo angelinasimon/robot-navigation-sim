@@ -12,7 +12,7 @@ Gazebo simulated camera
 perception_node
         ↓ detections
 planner_node
-        ↓ stop/go command
+        ↓ cruise / avoid let / avoid right command
 robot_driver
         ↓ velocity command
 Gazebo simulated robot motion# robot-navigation-sim
