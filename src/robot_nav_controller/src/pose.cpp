@@ -1,5 +1,1 @@
-#include <iostream>
-
-struct Pose {
-    double x, y, theta;
-};
+#include "robot_nav_controller/pose.hpp"

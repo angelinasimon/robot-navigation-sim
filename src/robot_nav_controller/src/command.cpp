@@ -1,5 +1,1 @@
-#include <iostream>
-
-struct Command {
-    double linear_velocity, angular_velocity;
-};
+#include "robot_nav_controller/command.hpp"

@@ -1,26 +1,31 @@
 cmake_minimum_required(VERSION 3.8)
-project(robot_nav_controller)
+project(robot_nav_controller LANGUAGES CXX)
 
-if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
+add_library(robot_nav_controller src/controller.cpp src/utils.cpp src/pose.cpp src/command.cpp)
+target_include_directories(robot_nav_controller PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>)
+target_compile_features(robot_nav_controller PUBLIC cxx_std_17)
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+  target_compile_options(robot_nav_controller PRIVATE -Wall -Wextra -Wpedantic)
 endif()
 
-# find dependencies
-find_package(ament_cmake REQUIRED)
-find_package(rclcpp REQUIRED)
-find_package(nav_msgs REQUIRED)
-find_package(geometry_msgs REQUIRED)
-
+include(CTest)
 if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  # the following line skips the linter which checks for copyrights
-  # comment the line when a copyright and license is added to all source files
-  set(ament_cmake_copyright_FOUND TRUE)
-  # the following line skips cpplint (only works in a git repo)
-  # comment the line when this package is in a git repo and when
-  # a copyright and license is added to all source files
-  set(ament_cmake_cpplint_FOUND TRUE)
-  ament_lint_auto_find_test_dependencies()
+  foreach(test_name controller_unit closed_loop_drive)
+    add_executable(${test_name} test/${test_name}.cpp)
+    target_link_libraries(${test_name} PRIVATE robot_nav_controller)
+    add_test(NAME ${test_name} COMMAND ${test_name})
+  endforeach()
 endif()
 
-ament_package()
+install(TARGETS robot_nav_controller DESTINATION lib)
+install(DIRECTORY include/ DESTINATION include)
+
+# Preserve colcon package discovery when built in a ROS workspace.
+find_package(ament_cmake QUIET)
+if(ament_cmake_FOUND)
+  ament_export_include_directories(include)
+  ament_export_libraries(robot_nav_controller)
+  ament_package()
+endif()
