@@ -7,6 +7,9 @@
 // goal_pose.theta is intentionally ignored; final orientation is unconstrained.
 class Controller {
  public:
+    // Throws std::invalid_argument unless every parameter is finite, the gains
+    // and velocity limits are > 0, and the thresholds are >= 0. A
+    // spin_threshold >= pi never triggers turn-in-place.
     Controller(double kp = 1.0, double ka = 2.0,
                double stop_threshold = 0.05, double spin_threshold = 0.5,
                double max_linear_velocity = 0.5,

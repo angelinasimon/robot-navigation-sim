@@ -25,9 +25,9 @@ moves forward while steering. Default gains are 1.0 (distance) and 2.0
 (heading); speeds are capped at 0.5 m/s and 1.5 rad/s. At or within 0.05 m
 of the goal both velocities are zero. Goal orientation is unconstrained;
 `goal.theta` does not affect steering. All pose fields must be finite.
-Invalid poses return a zero command. Constructor parameters must be finite
-and positive, with the spin threshold at most pi/2; invalid parameters throw
-`std::invalid_argument`.
+Invalid poses return a zero command. Constructor parameters must be finite;
+gains and velocity limits must be positive and the stop and spin thresholds
+nonnegative. Invalid parameters throw `std::invalid_argument`.
 
 The unit test covers stopping, proportional motion, speed limits, turn
 signs, angle wrapping, invalid input, and parameter validation. The

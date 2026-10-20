@@ -2,18 +2,44 @@
 
 #include <algorithm>
 #include <cmath>
+#include <stdexcept>
+#include <string>
 
 #include "robot_nav_controller/utils.hpp"
+
+namespace {
+
+double require_positive(const char* name, double value) {
+  if (!std::isfinite(value) || value <= 0.0) {
+    throw std::invalid_argument(std::string(name) +
+                                " must be finite and > 0, got " +
+                                std::to_string(value));
+  }
+  return value;
+}
+
+double require_nonnegative(const char* name, double value) {
+  if (!std::isfinite(value) || value < 0.0) {
+    throw std::invalid_argument(std::string(name) +
+                                " must be finite and >= 0, got " +
+                                std::to_string(value));
+  }
+  return value;
+}
+
+}  // namespace
 
 Controller::Controller(double kp, double ka, double stop_threshold,
                        double spin_threshold, double max_linear_velocity,
                        double max_angular_velocity)
-    : kp_(kp),
-      ka_(ka),
-      stop_threshold_(stop_threshold),
-      spin_threshold_(spin_threshold),
-      max_linear_velocity_(max_linear_velocity),
-      max_angular_velocity_(max_angular_velocity) {}
+    : kp_(require_positive("kp", kp)),
+      ka_(require_positive("ka", ka)),
+      stop_threshold_(require_nonnegative("stop_threshold", stop_threshold)),
+      spin_threshold_(require_nonnegative("spin_threshold", spin_threshold)),
+      max_linear_velocity_(
+          require_positive("max_linear_velocity", max_linear_velocity)),
+      max_angular_velocity_(
+          require_positive("max_angular_velocity", max_angular_velocity)) {}
 
 Command Controller::compute_command(const Pose& current_pose,
                                     const Pose& goal_pose) const {
@@ -31,7 +57,7 @@ Command Controller::compute_command(const Pose& current_pose,
   const double rho = std::hypot(dx, dy);
 
   // Close enough: stop. (alpha is meaningless right on top of the goal.)
-  if (rho < stop_threshold_) {
+  if (rho <= stop_threshold_) {
     return stop;
   }
 

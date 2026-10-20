@@ -43,7 +43,9 @@ int main() {
         }
     }
     for (int i = 0; i < 6; ++i) {
-        for (double bad : {0.0, -1.0, nan, inf}) {
+        const bool is_threshold = (i == 2 || i == 3);
+        for (double bad : {0.0, -1e-9, -1.0, nan, inf, -inf}) {
+            if (bad == 0.0 && is_threshold) continue;
             double args[] = {1, 2, 0.05, 0.5, 0.5, 1.5};
             args[i] = bad;
             bool threw = false;
@@ -52,9 +54,16 @@ int main() {
             check(threw, "Invalid parameters must throw");
         }
     }
-    bool threw = false;
-    try { Controller invalid(1, 2, 0.05, pi); }
-    catch (const std::invalid_argument&) { threw = true; }
-    check(threw, "Reject backward-facing drive threshold");
+    try {
+        Controller(1, 2, 0.0);
+        Controller(1, 2, 0.05, 0.0);
+        Controller(1, 2, 0.05, pi);
+        Controller(1, 2, 0.05, 4.0);
+        Controller(1e-9, 1e-9, 0.05, 0.5, 1e-9, 1e-9);
+    } catch (const std::invalid_argument&) {
+        check(false, "Valid boundary parameters must not throw");
+    }
+    cmd = Controller(1, 2, 0.05, 4.0).compute_command({0, 0, 0}, {-1, 0, 0});
+    check(cmd.linear_velocity > 0, "Spin threshold above pi never spins in place");
     std::cout << "Controller unit tests passed\n";
 }
