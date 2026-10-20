@@ -41,14 +41,14 @@ Controller::Controller(double kp, double ka, double stop_threshold,
       max_angular_velocity_(
           require_positive("max_angular_velocity", max_angular_velocity)) {}
 
-Command Controller::compute_command(const Pose& current_pose,
-                                    const Pose& goal_pose) const {
+ControlResult Controller::compute_command(const Pose& current_pose,
+                                          const Pose& goal_pose) const {
   const Command stop{0.0, 0.0};
 
   if (!std::isfinite(current_pose.x) || !std::isfinite(current_pose.y) ||
       !std::isfinite(current_pose.theta) || !std::isfinite(goal_pose.x) ||
-      !std::isfinite(goal_pose.y)) {
-    return stop;
+      !std::isfinite(goal_pose.y) || !std::isfinite(goal_pose.theta)) {
+    return {stop, ControllerStatus::INVALID_INPUT};
   }
 
   // rho: distance to the goal.
@@ -58,7 +58,7 @@ Command Controller::compute_command(const Pose& current_pose,
 
   // Close enough: stop. (alpha is meaningless right on top of the goal.)
   if (rho <= stop_threshold_) {
-    return stop;
+    return {stop, ControllerStatus::GOAL_REACHED};
   }
 
   // alpha: angle from the robot's nose to the goal, wrapped to (-pi, pi].
@@ -78,5 +78,5 @@ Command Controller::compute_command(const Pose& current_pose,
                                    max_linear_velocity_);
   cmd.angular_velocity = std::clamp(cmd.angular_velocity, -max_angular_velocity_,
                                     max_angular_velocity_);
-  return cmd;
+  return {cmd, ControllerStatus::RUNNING};
 }

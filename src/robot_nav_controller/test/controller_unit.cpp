@@ -10,27 +10,32 @@ void check(bool condition, const char* message) {
     if (!condition) { std::cerr << message << '\n'; std::exit(1); }
 }
 bool near(double a, double b) { return std::abs(a - b) < 1e-10; }
+bool is_stop(const Command& c) { return c.linear_velocity == 0 && c.angular_velocity == 0; }
 int main() {
     const double pi = robot_nav_controller::kPi;
+    using S = ControllerStatus;
     const Controller controller;
-    auto cmd = controller.compute_command({0, 0, 0}, {0, 0, pi});
-    check(cmd.linear_velocity == 0 && cmd.angular_velocity == 0, "At goal must stop");
-    cmd = controller.compute_command({0, 0, 0}, {0.05, 0, 0});
-    check(cmd.linear_velocity == 0 && cmd.angular_velocity == 0, "Tolerance boundary must stop");
-    cmd = controller.compute_command({0, 0, 0}, {0.2, 0, 0});
-    check(near(cmd.linear_velocity, 0.2) && near(cmd.angular_velocity, 0), "Proportional forward motion");
-    cmd = controller.compute_command({0, 0, 0}, {10, 0, 0});
-    check(near(cmd.linear_velocity, 0.5), "Linear speed cap");
+    auto res = controller.compute_command({0, 0, 0}, {0, 0, pi});
+    check(is_stop(res.command) && res.status == S::GOAL_REACHED, "At goal must stop");
+    res = controller.compute_command({0, 0, 0}, {0.05, 0, 0});
+    check(is_stop(res.command) && res.status == S::GOAL_REACHED, "Tolerance boundary must stop");
+    res = controller.compute_command({0, 0, 0}, {0.2, 0, 0});
+    check(near(res.command.linear_velocity, 0.2) && near(res.command.angular_velocity, 0)
+          && res.status == S::RUNNING, "Proportional forward motion");
+    res = controller.compute_command({0, 0, 0}, {10, 0, 0});
+    check(near(res.command.linear_velocity, 0.5) && res.status == S::RUNNING, "Linear speed cap");
     for (double sign : {-1.0, 1.0}) {
-        cmd = controller.compute_command({0, 0, 0}, {0, sign, 0});
-        check(cmd.linear_velocity == 0 && near(cmd.angular_velocity, sign * 1.5), "Spin direction and angular cap");
+        res = controller.compute_command({0, 0, 0}, {0, sign, 0});
+        check(res.command.linear_velocity == 0 && near(res.command.angular_velocity, sign * 1.5)
+              && res.status == S::RUNNING, "Spin direction and angular cap");
     }
-    cmd = controller.compute_command({0, 0, pi - 0.1}, {-std::cos(0.1), -std::sin(0.1), 0});
-    check(near(cmd.angular_velocity, 0.4), "Shortest turn across angle wrap");
-    cmd = controller.compute_command({0, 0, 8 * pi}, {1, 0, 0});
-    check(near(cmd.angular_velocity, 0), "Unwrapped heading");
-    cmd = controller.compute_command({0, 0, 0}, {std::cos(0.25), std::sin(0.25), 0});
-    check(cmd.linear_velocity > 0 && near(cmd.angular_velocity, 0.5), "Steer while driving");
+    res = controller.compute_command({0, 0, pi - 0.1}, {-std::cos(0.1), -std::sin(0.1), 0});
+    check(near(res.command.angular_velocity, 0.4), "Shortest turn across angle wrap");
+    res = controller.compute_command({0, 0, 8 * pi}, {1, 0, 0});
+    check(near(res.command.angular_velocity, 0), "Unwrapped heading");
+    res = controller.compute_command({0, 0, 0}, {std::cos(0.25), std::sin(0.25), 0});
+    check(res.command.linear_velocity > 0 && near(res.command.angular_velocity, 0.5)
+          && res.status == S::RUNNING, "Steer while driving");
     const double nan = std::numeric_limits<double>::quiet_NaN();
     const double inf = std::numeric_limits<double>::infinity();
     for (double bad : {nan, inf, -inf}) {
@@ -38,10 +43,12 @@ int main() {
             Pose current{0, 0, 0}, goal{1, 0, 0};
             double* fields[] = {&current.x, &current.y, &current.theta, &goal.x, &goal.y, &goal.theta};
             *fields[i] = bad;
-            cmd = controller.compute_command(current, goal);
-            check(cmd.linear_velocity == 0 && cmd.angular_velocity == 0, "Invalid pose must stop");
+            res = controller.compute_command(current, goal);
+            check(is_stop(res.command) && res.status == S::INVALID_INPUT, "Invalid pose must stop");
         }
     }
+    res = controller.compute_command({0, 0, nan}, {0, 0, 0});
+    check(is_stop(res.command) && res.status == S::INVALID_INPUT, "Invalid input outranks goal reached");
     for (int i = 0; i < 6; ++i) {
         const bool is_threshold = (i == 2 || i == 3);
         for (double bad : {0.0, -1e-9, -1.0, nan, inf, -inf}) {
@@ -63,7 +70,7 @@ int main() {
     } catch (const std::invalid_argument&) {
         check(false, "Valid boundary parameters must not throw");
     }
-    cmd = Controller(1, 2, 0.05, 4.0).compute_command({0, 0, 0}, {-1, 0, 0});
-    check(cmd.linear_velocity > 0, "Spin threshold above pi never spins in place");
+    res = Controller(1, 2, 0.05, 4.0).compute_command({0, 0, 0}, {-1, 0, 0});
+    check(res.command.linear_velocity > 0, "Spin threshold above pi never spins in place");
     std::cout << "Controller unit tests passed\n";
 }

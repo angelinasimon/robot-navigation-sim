@@ -15,14 +15,18 @@ int main() {
             Pose pose = start;
             bool stopped = false;
             for (int step = 0; step < 6000; ++step) {
-                const auto cmd = controller.compute_command(pose, goal);
-                if (!std::isfinite(cmd.linear_velocity) || !std::isfinite(cmd.angular_velocity)
-                    || cmd.linear_velocity < 0 || cmd.linear_velocity > 0.5
-                    || std::abs(cmd.angular_velocity) > 1.5) return EXIT_FAILURE;
-                if (cmd.linear_velocity == 0 && cmd.angular_velocity == 0) {
+                const auto res = controller.compute_command(pose, goal);
+                if (res.status == ControllerStatus::INVALID_INPUT) return EXIT_FAILURE;
+                if (res.status == ControllerStatus::GOAL_REACHED) {
+                    if (res.command.linear_velocity != 0 || res.command.angular_velocity != 0)
+                        return EXIT_FAILURE;
                     stopped = true;
                     break;
                 }
+                const Command& cmd = res.command;
+                if (!std::isfinite(cmd.linear_velocity) || !std::isfinite(cmd.angular_velocity)
+                    || cmd.linear_velocity < 0 || cmd.linear_velocity > 0.5
+                    || std::abs(cmd.angular_velocity) > 1.5) return EXIT_FAILURE;
                 const double dt = 0.02;
                 const double next = pose.theta + cmd.angular_velocity * dt;
                 if (std::abs(cmd.angular_velocity) < 1e-12) {
@@ -41,7 +45,9 @@ int main() {
                 return EXIT_FAILURE;
             }
             const auto settled = controller.compute_command(pose, goal);
-            if (settled.linear_velocity != 0 || settled.angular_velocity != 0) return EXIT_FAILURE;
+            if (settled.status != ControllerStatus::GOAL_REACHED
+                || settled.command.linear_velocity != 0
+                || settled.command.angular_velocity != 0) return EXIT_FAILURE;
         }
     }
     std::cout << "All 16 closed-loop drives reached the goal and stopped\n";
