@@ -26,8 +26,9 @@ moves forward while steering. Default gains are 1.0 (distance) and 2.0
 (heading); speeds are capped at 0.5 m/s and 1.5 rad/s. At or within 0.05 m
 of the goal both velocities are zero. Goal orientation is unconstrained;
 `goal.theta` does not affect steering. Constructor parameters must be finite;
-gains and velocity limits must be positive and the stop and spin thresholds
-nonnegative. Invalid parameters throw `std::invalid_argument`.
+gains and velocity limits must be positive, the stop threshold nonnegative,
+and the spin threshold between 0 and pi/2 so the robot never drives forward
+with the goal behind it. Invalid parameters throw `std::invalid_argument`.
 
 Each result carries a `ControllerStatus`, checked in this order:
 
@@ -42,8 +43,7 @@ of tolerance.
 
 The unit test covers stopping, proportional motion, speed limits, turn
 signs, angle wrapping, invalid input, status reporting, and parameter
-validation. The
-closed-loop test integrates a planar unicycle at 50 Hz for 16 combinations
+validation. The closed-loop test integrates a planar unicycle at 50 Hz for 16 combinations
 of starting poses and goals, checking speed bounds, `GOAL_REACHED` within 0.05 m,
 and a stable stop within 120 simulated seconds. This is an obstacle-free
 kinematic test; it does not model wheel dynamics or collisions.
