@@ -61,16 +61,22 @@ int main() {
             check(threw, "Invalid parameters must throw");
         }
     }
+    for (double bad : {pi / 2 + 1e-9, pi, 4.0}) {
+        bool threw = false;
+        try { Controller invalid(1, 2, 0.05, bad); }
+        catch (const std::invalid_argument&) { threw = true; }
+        check(threw, "Reject spin threshold above pi/2");
+    }
     try {
         Controller(1, 2, 0.0);
         Controller(1, 2, 0.05, 0.0);
-        Controller(1, 2, 0.05, pi);
-        Controller(1, 2, 0.05, 4.0);
+        Controller(1, 2, 0.05, pi / 2);
         Controller(1e-9, 1e-9, 0.05, 0.5, 1e-9, 1e-9);
     } catch (const std::invalid_argument&) {
         check(false, "Valid boundary parameters must not throw");
     }
-    res = Controller(1, 2, 0.05, 4.0).compute_command({0, 0, 0}, {-1, 0, 0});
-    check(res.command.linear_velocity > 0, "Spin threshold above pi never spins in place");
+    res = Controller(1, 2, 0.05, pi / 2).compute_command({0, 0, 0}, {-1, 0, 0});
+    check(res.command.linear_velocity == 0 && res.status == S::RUNNING,
+          "Goal behind must turn in place at the widest spin threshold");
     std::cout << "Controller unit tests passed\n";
 }

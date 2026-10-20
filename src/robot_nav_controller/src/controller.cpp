@@ -27,6 +27,17 @@ double require_nonnegative(const char* name, double value) {
   return value;
 }
 
+// Above pi/2 the robot would drive forward with the goal behind it, moving
+// away from the goal while it turns.
+double require_spin_threshold(double value) {
+  require_nonnegative("spin_threshold", value);
+  if (value > robot_nav_controller::kPi / 2.0) {
+    throw std::invalid_argument("spin_threshold must be <= pi/2, got " +
+                                std::to_string(value));
+  }
+  return value;
+}
+
 }  // namespace
 
 Controller::Controller(double kp, double ka, double stop_threshold,
@@ -35,7 +46,7 @@ Controller::Controller(double kp, double ka, double stop_threshold,
     : kp_(require_positive("kp", kp)),
       ka_(require_positive("ka", ka)),
       stop_threshold_(require_nonnegative("stop_threshold", stop_threshold)),
-      spin_threshold_(require_nonnegative("spin_threshold", spin_threshold)),
+      spin_threshold_(require_spin_threshold(spin_threshold)),
       max_linear_velocity_(
           require_positive("max_linear_velocity", max_linear_velocity)),
       max_angular_velocity_(
