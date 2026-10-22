@@ -36,6 +36,19 @@ int main() {
     res = controller.compute_command({0, 0, 0}, {std::cos(0.25), std::sin(0.25), 0});
     check(res.command.linear_velocity > 0 && near(res.command.angular_velocity, 0.5)
           && res.status == S::RUNNING, "Steer while driving");
+    // Velocity taper (#1). The goal is 10 m away so the speed is capped at 0.5;
+    // facing -a puts the heading error at +a.
+    auto v_at = [&](double a) {
+        return controller.compute_command({0, 0, -a}, {10, 0, 0}).command.linear_velocity;
+    };
+    check(near(v_at(0.5), 0) && v_at(0.6) == 0, "No forward speed at or beyond spin threshold");
+    check(v_at(0.499) > 0 && v_at(0.499) < 0.01, "Speed is continuous at spin threshold");
+    for (double a = 0.05; a <= 0.5; a += 0.05)
+        check(v_at(a) < v_at(a - 0.05), "Speed decreases as heading error grows");
+    check(near(v_at(0.3), v_at(-0.3)), "Taper is symmetric");
+    // Taper is applied after the speed cap. If the order were reversed, 10 m * 0.75
+    // would be capped back to 0.5 and the taper would be lost.
+    check(std::abs(v_at(0.25) - 0.37303) < 1e-4, "Taper scales the capped speed");
     const double nan = std::numeric_limits<double>::quiet_NaN();
     const double inf = std::numeric_limits<double>::infinity();
     for (double bad : {nan, inf, -inf}) {

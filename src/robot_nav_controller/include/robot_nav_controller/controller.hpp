@@ -18,7 +18,9 @@ class Controller {
     // Stateless; each call is judged on its own. Checked in order:
     //   INVALID_INPUT  any pose field (goal theta included) is non-finite.
     //   GOAL_REACHED   distance to goal <= stop_threshold.
-    //   RUNNING        otherwise.
+    //   RUNNING        otherwise. Forward speed tapers smoothly to zero as the
+    //                  heading error approaches spin_threshold, and the robot
+    //                  turns in place beyond it.
     // Both terminal statuses carry a zero command. GOAL_REACHED reverts to
     // RUNNING if the robot later drifts out of tolerance.
     ControlResult compute_command(const Pose& current_pose,

@@ -62,6 +62,12 @@ int main() {
             worst_time = std::max(worst_time, step * dt);
         }
     }
+    // Baseline before the taper (#1) was 0.5 m/s. About 0.05 m/s remains, from
+    // the final step down from kp * stop_threshold to zero on arrival.
+    if (worst_dv > 0.1) {
+        std::cerr << "Linear velocity jumped by " << worst_dv << " m/s in one step\n";
+        return EXIT_FAILURE;
+    }
     std::cout << "All 16 closed-loop drives reached the goal and stopped\n"
               << "  max |dv| per step: " << worst_dv << " m/s\n"
               << "  time to goal: mean " << total_time / 16 << " s, max " << worst_time << " s\n";
