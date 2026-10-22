@@ -50,9 +50,9 @@ int main() {
     res = controller.compute_command({0, 0, nan}, {0, 0, 0});
     check(is_stop(res.command) && res.status == S::INVALID_INPUT, "Invalid input outranks goal reached");
     for (int i = 0; i < 6; ++i) {
-        const bool is_threshold = (i == 2 || i == 3);
+        const bool is_stop_threshold = (i == 2);
         for (double bad : {0.0, -1e-9, -1.0, nan, inf, -inf}) {
-            if (bad == 0.0 && is_threshold) continue;
+            if (bad == 0.0 && is_stop_threshold) continue;
             double args[] = {1, 2, 0.05, 0.5, 0.5, 1.5};
             args[i] = bad;
             bool threw = false;
@@ -69,7 +69,6 @@ int main() {
     }
     try {
         Controller(1, 2, 0.0);
-        Controller(1, 2, 0.05, 0.0);
         Controller(1, 2, 0.05, pi / 2);
         Controller(1e-9, 1e-9, 0.05, 0.5, 1e-9, 1e-9);
     } catch (const std::invalid_argument&) {

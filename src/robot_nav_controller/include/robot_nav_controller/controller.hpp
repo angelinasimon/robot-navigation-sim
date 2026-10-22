@@ -9,7 +9,7 @@ class Controller {
  public:
     // Throws std::invalid_argument unless every parameter is finite, the gains
     // and velocity limits are > 0, stop_threshold is >= 0, and spin_threshold
-    // is in [0, pi/2] so the robot never drives forward with the goal behind it.
+    // is in (0, pi/2] so the robot never drives forward with the goal behind it.
     Controller(double kp = 1.0, double ka = 2.0,
                double stop_threshold = 0.05, double spin_threshold = 0.5,
                double max_linear_velocity = 0.5,

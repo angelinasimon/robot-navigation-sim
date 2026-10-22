@@ -28,9 +28,10 @@ double require_nonnegative(const char* name, double value) {
 }
 
 // Above pi/2 the robot would drive forward with the goal behind it, moving
-// away from the goal while it turns.
+// away from the goal while it turns. At 0 it could only drive with exactly
+// zero heading error, which it never reaches, so it would turn forever.
 double require_spin_threshold(double value) {
-  require_nonnegative("spin_threshold", value);
+  require_positive("spin_threshold", value);
   if (value > robot_nav_controller::kPi / 2.0) {
     throw std::invalid_argument("spin_threshold must be <= pi/2, got " +
                                 std::to_string(value));

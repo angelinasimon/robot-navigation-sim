@@ -27,7 +27,7 @@ moves forward while steering. Default gains are 1.0 (distance) and 2.0
 of the goal both velocities are zero. Goal orientation is unconstrained;
 `goal.theta` does not affect steering. Constructor parameters must be finite;
 gains and velocity limits must be positive, the stop threshold nonnegative,
-and the spin threshold between 0 and pi/2 so the robot never drives forward
+and the spin threshold greater than 0 and at most pi/2 so the robot never drives forward
 with the goal behind it. Invalid parameters throw `std::invalid_argument`.
 
 Each result carries a `ControllerStatus`, checked in this order:
