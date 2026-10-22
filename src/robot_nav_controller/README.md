@@ -21,13 +21,14 @@ ControlResult result = controller.compute_command(Pose{0, 0, 0}, Pose{2, 1, 0});
 ```
 
 `compute_command` uses proportional distance and wrapped heading errors.
-It spins in place when the heading error exceeds 0.5 radians, otherwise
-moves forward while steering. Default gains are 1.0 (distance) and 2.0
+Forward speed tapers smoothly from full speed when facing the goal to zero
+at a heading error of 0.5 radians (the spin threshold), so there is no jump
+between turning in place and driving. Beyond the threshold it turns in place. Default gains are 1.0 (distance) and 2.0
 (heading); speeds are capped at 0.5 m/s and 1.5 rad/s. At or within 0.05 m
 of the goal both velocities are zero. Goal orientation is unconstrained;
 `goal.theta` does not affect steering. Constructor parameters must be finite;
 gains and velocity limits must be positive, the stop threshold nonnegative,
-and the spin threshold between 0 and pi/2 so the robot never drives forward
+and the spin threshold greater than 0 and at most pi/2 so the robot never drives forward
 with the goal behind it. Invalid parameters throw `std::invalid_argument`.
 
 Each result carries a `ControllerStatus`, checked in this order:
@@ -44,6 +45,7 @@ of tolerance.
 The unit test covers stopping, proportional motion, speed limits, turn
 signs, angle wrapping, invalid input, status reporting, and parameter
 validation. The closed-loop test integrates a planar unicycle at 50 Hz for 16 combinations
-of starting poses and goals, checking speed bounds, `GOAL_REACHED` within 0.05 m,
+of starting poses and goals, checking speed bounds, that linear velocity never changes by more than
+0.1 m/s in one step, `GOAL_REACHED` within 0.05 m,
 and a stable stop within 120 simulated seconds. This is an obstacle-free
 kinematic test; it does not model wheel dynamics or collisions.

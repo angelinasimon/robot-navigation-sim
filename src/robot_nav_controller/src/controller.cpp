@@ -28,9 +28,10 @@ double require_nonnegative(const char* name, double value) {
 }
 
 // Above pi/2 the robot would drive forward with the goal behind it, moving
-// away from the goal while it turns.
+// away from the goal while it turns. At 0 it could only drive with exactly
+// zero heading error, which it never reaches, so it would turn forever.
 double require_spin_threshold(double value) {
-  require_nonnegative("spin_threshold", value);
+  require_positive("spin_threshold", value);
   if (value > robot_nav_controller::kPi / 2.0) {
     throw std::invalid_argument("spin_threshold must be <= pi/2, got " +
                                 std::to_string(value));
@@ -78,15 +79,18 @@ ControlResult Controller::compute_command(const Pose& current_pose,
 
   Command cmd;
   cmd.angular_velocity = ka_ * alpha;
-  if (std::fabs(alpha) > spin_threshold_) {
-    // Goal is too far off to the side or behind: turn in place first.
-    cmd.linear_velocity = 0.0;
-  } else {
-    cmd.linear_velocity = kp_ * rho;
-  }
+  // Forward speed tapers smoothly from full (facing the goal) to zero at
+  // |alpha| = spin_threshold, and stays zero beyond it (turn in place). Using
+  // cos keeps the taper flat near alpha = 0, so small heading noise while
+  // driving straight barely changes the speed. The denominator is positive
+  // because the constructor guarantees spin_threshold is in (0, pi/2].
+  // Cap the speed before tapering: tapering first and capping after would let
+  // the cap flatten most of the taper whenever kp * rho exceeds the limit.
+  const double cos_spin = std::cos(spin_threshold_);
+  const double scale =
+      std::clamp((std::cos(alpha) - cos_spin) / (1.0 - cos_spin), 0.0, 1.0);
+  cmd.linear_velocity = std::min(kp_ * rho, max_linear_velocity_) * scale;
 
-  cmd.linear_velocity = std::clamp(cmd.linear_velocity, -max_linear_velocity_,
-                                   max_linear_velocity_);
   cmd.angular_velocity = std::clamp(cmd.angular_velocity, -max_angular_velocity_,
                                     max_angular_velocity_);
   return {cmd, ControllerStatus::RUNNING};

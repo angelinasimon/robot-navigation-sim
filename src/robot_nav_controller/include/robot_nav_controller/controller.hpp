@@ -9,7 +9,7 @@ class Controller {
  public:
     // Throws std::invalid_argument unless every parameter is finite, the gains
     // and velocity limits are > 0, stop_threshold is >= 0, and spin_threshold
-    // is in [0, pi/2] so the robot never drives forward with the goal behind it.
+    // is in (0, pi/2] so the robot never drives forward with the goal behind it.
     Controller(double kp = 1.0, double ka = 2.0,
                double stop_threshold = 0.05, double spin_threshold = 0.5,
                double max_linear_velocity = 0.5,
@@ -18,7 +18,9 @@ class Controller {
     // Stateless; each call is judged on its own. Checked in order:
     //   INVALID_INPUT  any pose field (goal theta included) is non-finite.
     //   GOAL_REACHED   distance to goal <= stop_threshold.
-    //   RUNNING        otherwise.
+    //   RUNNING        otherwise. Forward speed tapers smoothly to zero as the
+    //                  heading error approaches spin_threshold, and the robot
+    //                  turns in place beyond it.
     // Both terminal statuses carry a zero command. GOAL_REACHED reverts to
     // RUNNING if the robot later drifts out of tolerance.
     ControlResult compute_command(const Pose& current_pose,
