@@ -1,5 +1,6 @@
 #include "robot_nav_controller/controller.hpp"
 #include "robot_nav_controller/utils.hpp"
+#include "unicycle.hpp"
 #include <algorithm>
 #include <cmath>
 #include <cstdlib>
@@ -41,16 +42,7 @@ int main() {
                 if (!std::isfinite(cmd.linear_velocity) || !std::isfinite(cmd.angular_velocity)
                     || cmd.linear_velocity < 0 || cmd.linear_velocity > 0.5
                     || std::abs(cmd.angular_velocity) > 1.5) return EXIT_FAILURE;
-                const double next = pose.theta + cmd.angular_velocity * dt;
-                if (std::abs(cmd.angular_velocity) < 1e-12) {
-                    pose.x += cmd.linear_velocity * std::cos(pose.theta) * dt;
-                    pose.y += cmd.linear_velocity * std::sin(pose.theta) * dt;
-                } else {
-                    const double radius = cmd.linear_velocity / cmd.angular_velocity;
-                    pose.x += radius * (std::sin(next) - std::sin(pose.theta));
-                    pose.y -= radius * (std::cos(next) - std::cos(pose.theta));
-                }
-                pose.theta = robot_nav_controller::wrap_angle(next);
+                step_unicycle(pose, cmd, dt);
             }
             const double error = std::hypot(goal.x - pose.x, goal.y - pose.y);
             if (!stopped || error > 0.05) {

@@ -17,6 +17,12 @@ if(BUILD_TESTING)
     target_link_libraries(${test_name} PRIVATE robot_nav_controller)
     add_test(NAME ${test_name} COMMAND ${test_name})
   endforeach()
+
+  # Experiments print measurements for a human to read; they have no pass/fail,
+  # so they are built but not registered with ctest.
+  add_executable(wraparound_study experiments/wraparound_study.cpp)
+  target_link_libraries(wraparound_study PRIVATE robot_nav_controller)
+  target_include_directories(wraparound_study PRIVATE test)
 endif()
 
 install(TARGETS robot_nav_controller DESTINATION lib)
