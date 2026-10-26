@@ -36,6 +36,21 @@ int main() {
     res = controller.compute_command({0, 0, 0}, {std::cos(0.25), std::sin(0.25), 0});
     check(res.command.linear_velocity > 0 && near(res.command.angular_velocity, 0.5)
           && res.status == S::RUNNING, "Steer while driving");
+    // Goal behind the robot (#4). A heading error of exactly pi is a tie between
+    // turning left and right; the (-pi, pi] wrap breaks it toward +pi (left), from
+    // either the goal side (atan2 = pi) or the heading side (0 - pi wraps to +pi).
+    res = controller.compute_command({0, 0, 0}, {-1, 0, 0});
+    check(res.command.linear_velocity == 0 && near(res.command.angular_velocity, 1.5),
+          "Goal directly behind turns left in place");
+    res = controller.compute_command({0, 0, pi}, {1, 0, 0});
+    check(res.command.linear_velocity == 0 && near(res.command.angular_velocity, 1.5),
+          "Goal directly behind via heading wrap turns left in place");
+    res = controller.compute_command({0, 0, 0}, {-1, 0.01, 0});
+    check(res.command.linear_velocity == 0 && res.command.angular_velocity > 0,
+          "Goal behind and slightly left turns left");
+    res = controller.compute_command({0, 0, 0}, {-1, -0.01, 0});
+    check(res.command.linear_velocity == 0 && res.command.angular_velocity < 0,
+          "Goal behind and slightly right turns right");
     // Velocity taper (#1). The goal is 10 m away so the speed is capped at 0.5;
     // facing -a puts the heading error at +a.
     auto v_at = [&](double a) {
