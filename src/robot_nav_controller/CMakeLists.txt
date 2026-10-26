@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.8)
 project(robot_nav_controller LANGUAGES CXX)
 
-add_library(robot_nav_controller src/controller.cpp src/utils.cpp src/pose.cpp src/command.cpp)
+add_library(robot_nav_controller src/controller.cpp src/utils.cpp src/pose.cpp src/command.cpp
+  src/depth_corridor.cpp)
 target_include_directories(robot_nav_controller PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>)
@@ -12,7 +13,7 @@ endif()
 
 include(CTest)
 if(BUILD_TESTING)
-  foreach(test_name controller_unit closed_loop_drive)
+  foreach(test_name controller_unit closed_loop_drive depth_corridor_unit)
     add_executable(${test_name} test/${test_name}.cpp)
     target_link_libraries(${test_name} PRIVATE robot_nav_controller)
     add_test(NAME ${test_name} COMMAND ${test_name})
