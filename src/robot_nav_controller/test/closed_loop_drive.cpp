@@ -1,5 +1,6 @@
 #include "robot_nav_controller/controller.hpp"
 #include "robot_nav_controller/utils.hpp"
+#include "unicycle.hpp"
 #include <algorithm>
 #include <cmath>
 #include <cstdlib>
@@ -10,7 +11,10 @@ int main() {
     const double pi = robot_nav_controller::kPi;
     // Unicycle model with exact constant-command integration at 50 Hz.
     const Pose starts[] = {{0, 0, 0}, {0, 0, pi}, {2, -3, -pi / 2}, {-2, 1, 9 * pi}};
-    const Pose goals[] = {{2, 1, 0}, {-1, -2, 0}, {0, 0, pi}, {3, -1, -pi}};
+    // {-2, 0} and {2, 0} are directly behind the starts at (0, 0) facing 0 and pi,
+    // so those runs begin with a heading error of exactly pi (#4).
+    const Pose goals[] = {{2, 1, 0}, {-1, -2, 0}, {0, 0, pi}, {3, -1, -pi}, {-2, 0, 0}, {2, 0, 0}};
+    int runs = 0;
     const double dt = 0.02;
     // Smoothness metric: largest change in linear velocity between consecutive
     // commands. The first command of each run is skipped: starting from rest is
@@ -38,16 +42,7 @@ int main() {
                 if (!std::isfinite(cmd.linear_velocity) || !std::isfinite(cmd.angular_velocity)
                     || cmd.linear_velocity < 0 || cmd.linear_velocity > 0.5
                     || std::abs(cmd.angular_velocity) > 1.5) return EXIT_FAILURE;
-                const double next = pose.theta + cmd.angular_velocity * dt;
-                if (std::abs(cmd.angular_velocity) < 1e-12) {
-                    pose.x += cmd.linear_velocity * std::cos(pose.theta) * dt;
-                    pose.y += cmd.linear_velocity * std::sin(pose.theta) * dt;
-                } else {
-                    const double radius = cmd.linear_velocity / cmd.angular_velocity;
-                    pose.x += radius * (std::sin(next) - std::sin(pose.theta));
-                    pose.y -= radius * (std::cos(next) - std::cos(pose.theta));
-                }
-                pose.theta = robot_nav_controller::wrap_angle(next);
+                step_unicycle(pose, cmd, dt);
             }
             const double error = std::hypot(goal.x - pose.x, goal.y - pose.y);
             if (!stopped || error > 0.05) {
@@ -58,6 +53,7 @@ int main() {
             if (settled.status != ControllerStatus::GOAL_REACHED
                 || settled.command.linear_velocity != 0
                 || settled.command.angular_velocity != 0) return EXIT_FAILURE;
+            ++runs;
             total_time += step * dt;
             worst_time = std::max(worst_time, step * dt);
         }
@@ -68,7 +64,7 @@ int main() {
         std::cerr << "Linear velocity jumped by " << worst_dv << " m/s in one step\n";
         return EXIT_FAILURE;
     }
-    std::cout << "All 16 closed-loop drives reached the goal and stopped\n"
+    std::cout << "All " << runs << " closed-loop drives reached the goal and stopped\n"
               << "  max |dv| per step: " << worst_dv << " m/s\n"
-              << "  time to goal: mean " << total_time / 16 << " s, max " << worst_time << " s\n";
+              << "  time to goal: mean " << total_time / runs << " s, max " << worst_time << " s\n";
 }
