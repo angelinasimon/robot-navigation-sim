@@ -66,11 +66,9 @@ class PerceptionNode(Node):
         """Publish an explicit 'nothing relevant seen this frame' heartbeat.
 
         Without this, the planner only hears from us when YOLO finds a box,
-        so the moment an obstacle leaves the frame (or was never seen), we
-        go silent -- and the planner then never publishes a fresh CRUISE,
-        leaving robot_driver stuck on whatever command it received last
-        (e.g. a stale AVOID_RIGHT) forever. Publishing every frame, even
-        empty ones, keeps the whole pipeline live.
+        so "nothing in view" and "perception has died" would look the same.
+        Publishing every frame, even empty ones, lets the planner's watchdog
+        tell them apart.
         """
         detection = Detection()
         detection.class_name = ''
