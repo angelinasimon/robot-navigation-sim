@@ -49,3 +49,19 @@ of starting poses and goals, checking speed bounds, that linear velocity never c
 0.1 m/s in one step, `GOAL_REACHED` within 0.05 m,
 and a stable stop within 120 simulated seconds. This is an obstacle-free
 kinematic test; it does not model wheel dynamics or collisions.
+
+## Driver node
+
+`driver_node` (built only in a ROS workspace) drives the simulated vehicle to
+the goal published on `/goal`. Its decisions live in `DriverLogic`
+(`driver_logic.hpp`), which wraps the `Controller` with the vehicle's tuned
+limits and a depth safety stop, and in `front_depth()` (`depth_corridor.hpp`).
+Both are unit-tested without ROS. The node publishes `cmd_vel`, `enable`, and
+`/driver/status` (`robot_nav_interfaces/msg/DriverStatus`) at 10 Hz.
+
+```sh
+ros2 run robot_nav_controller driver_node --ros-args -p hard_stop_distance:=0.85
+```
+
+Double parameters need a decimal point (`kp:=1.0`, not `kp:=1`); invalid
+values stop the node at startup with an error.

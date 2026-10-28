@@ -9,13 +9,19 @@ Build a simulated robot that uses a camera feed to detect obstacles and decide w
 ```text
 Gazebo simulated camera
         ↓
-perception_node
-        ↓ detections
-planner_node
-        ↓ cruise / avoid let / avoid right command
-robot_driver
-        ↓ velocity command
-Gazebo simulated robot motion# robot-navigation-sim
+perception_node (YOLO)
+        ↓ /detections
+planner_node (Python)        ← odometry, /driver/status
+        ↓ /goal: the destination, or a temporary detour goal around an obstacle
+driver_node (C++ Controller) ← odometry, depth image (safety stop)
+        ↓ /model/vehicle/cmd_vel
+Gazebo simulated robot motion
+```
+
+The planner decides *where* to go and the driver gets there safely. Run it with
+`./scripts/run_reactive_demo.sh` (or `false` to disable detours). Before/after
+numbers for this design are in `docs/goal-based-navigation-results.md`.
+
 ## Detection Data Contract
 
 One detection should contain:

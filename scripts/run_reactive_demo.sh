@@ -5,7 +5,8 @@ cd ~/robot-navigation-sim
 
 # Usage:
 #   ./scripts/run_reactive_demo.sh            -> avoidance ON (default)
-#   ./scripts/run_reactive_demo.sh false       -> avoidance OFF (stop-only baseline)
+#   ./scripts/run_reactive_demo.sh false       -> avoidance OFF (no detours; the
+#                                                driver's depth safety stop stays on)
 AVOIDANCE_ENABLED="${1:-true}"
 
 echo "Killing old processes..."
@@ -13,6 +14,9 @@ pkill -f gz || true
 pkill -f ros2 || true
 pkill -f perception_node || true
 pkill -f planner_node || true
+# Killing `ros2 run` does not always stop the node it started, so match the
+# node itself. robot_driver is the old Python driver, in case one is left over.
+pkill -f driver_node || true
 pkill -f robot_driver || true
 pkill -f ros_gz_bridge || true
 pkill -f parameter_bridge || true
@@ -42,12 +46,12 @@ echo "Starting perception..."
 ros2 run robot_nav_sim perception_node > logs/perception.log 2>&1 &
 sleep 2
 
-echo "Starting planner..."
-ros2 run robot_nav_sim planner_node > logs/planner.log 2>&1 &
+echo "Starting planner (avoidance_enabled=${AVOIDANCE_ENABLED})..."
+ros2 run robot_nav_sim planner_node --ros-args -p avoidance_enabled:="${AVOIDANCE_ENABLED}" > logs/planner.log 2>&1 &
 sleep 2
 
-echo "Starting driver (avoidance_enabled=${AVOIDANCE_ENABLED})..."
-ros2 run robot_nav_sim robot_driver --ros-args -p avoidance_enabled:="${AVOIDANCE_ENABLED}" > logs/driver.log 2>&1 &
+echo "Starting driver..."
+ros2 run robot_nav_controller driver_node > logs/driver.log 2>&1 &
 
 echo ""
 echo "Full loop is running. avoidance_enabled=${AVOIDANCE_ENABLED}"
@@ -59,7 +63,8 @@ echo "  tail -f logs/planner.log"
 echo "  tail -f logs/driver.log"
 echo ""
 echo "Useful checks:"
-echo "  ros2 topic echo /cmd"
+echo "  ros2 topic echo /goal"
+echo "  ros2 topic echo /driver/status"
 echo "  ros2 topic echo /detections"
 echo ""
 echo "To stop everything:"

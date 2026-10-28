@@ -24,11 +24,10 @@ setup(
         ],
     },
     entry_points={
-    'console_scripts': [
-        'planner_node = robot_nav_sim.planner_node:main',
-        'perception_node = robot_nav_sim.perception_node:main',
-        'robot_driver = robot_nav_sim.robot_driver:main',
-        'eval_logger_node = robot_nav_sim.eval_logger_node:main',
-    ],
-},
+        'console_scripts': [
+            'planner_node = robot_nav_sim.planner_node:main',
+            'perception_node = robot_nav_sim.perception_node:main',
+            'eval_logger_node = robot_nav_sim.eval_logger_node:main',
+        ],
+    },
 )
