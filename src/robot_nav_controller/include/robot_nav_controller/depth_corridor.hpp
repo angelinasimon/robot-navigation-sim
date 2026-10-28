@@ -14,6 +14,13 @@ struct DepthParams {
     double max_valid_depth = 5.0;
 };
 
+// Throws std::invalid_argument unless every field is finite, 0 < horizontal_fov
+// < pi, inflated_half_width > 0 and 0 <= min_valid_depth < max_valid_depth.
+// front_depth() doesn't check its parameters: with bad ones it would fail closed
+// on every frame, and the robot would sit in SAFETY_STOP with no hint that the
+// real problem is a configuration typo. Call this once, where parameters enter.
+void validate_depth_params(const DepthParams& params);
+
 // Distance to the nearest obstacle in the robot's path, in metres.
 //
 // Uses the lower part of the image (rows 45% to 98%), where wheel-height
