@@ -17,7 +17,7 @@
   ros2 run robot_nav_sim eval_logger_node --ros-args -p trial_id:=<id> \
     -p scenario_type:=off_center_person -p obstacle_x:=2.5 -p obstacle_y:=1.2 -p timeout_s:=120.0
   ```
-  The baseline was run on `PID-driving` before #12 (`baseline_001`–`003`); the after runs on `feat/12-planner-goals` (`after_001`–`003`). One baseline attempt is marked INVALID in the CSV (the sim was left paused) and is excluded.
+  The baseline (`baseline_001`–`003`) was run on `main`, whose simulation code (`src/robot_nav_sim`, `scripts`, `worlds`) matched `PID-driving` before #12: `git diff` shows only the then-unused `DriverStatus` message and `__pycache__` files. The after runs (`after_001`–`003`) were on `feat/12-planner-goals`. One baseline attempt is marked INVALID in the CSV (the sim was left paused) and is excluded.
 - **Prediction, written before the after runs:** faster, and a *closer* pass than the baseline, around 1.5–1.6 m, because the detour is designed to pass the person's centre at `pass_distance` = 1.5 m.
 
 ## Results
