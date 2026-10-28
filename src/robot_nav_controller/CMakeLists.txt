@@ -33,6 +33,24 @@ install(DIRECTORY include/ DESTINATION include)
 # Preserve colcon package discovery when built in a ROS workspace.
 find_package(ament_cmake QUIET)
 if(ament_cmake_FOUND)
+  # The ROS node is only built in a ROS workspace. Without ROS, the library and
+  # its tests still build with plain CMake.
+  find_package(rclcpp REQUIRED)
+  find_package(geometry_msgs REQUIRED)
+  find_package(nav_msgs REQUIRED)
+  find_package(sensor_msgs REQUIRED)
+  find_package(std_msgs REQUIRED)
+  find_package(robot_nav_interfaces REQUIRED)
+
+  add_executable(driver_node src/driver_node.cpp)
+  target_link_libraries(driver_node PRIVATE robot_nav_controller rclcpp::rclcpp
+    ${geometry_msgs_TARGETS} ${nav_msgs_TARGETS} ${sensor_msgs_TARGETS}
+    ${std_msgs_TARGETS} ${robot_nav_interfaces_TARGETS})
+  if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    target_compile_options(driver_node PRIVATE -Wall -Wextra -Wpedantic)
+  endif()
+  install(TARGETS driver_node DESTINATION lib/${PROJECT_NAME})
+
   ament_export_include_directories(include)
   ament_export_libraries(robot_nav_controller)
   ament_package()
