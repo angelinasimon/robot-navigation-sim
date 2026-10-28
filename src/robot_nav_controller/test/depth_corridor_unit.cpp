@@ -4,7 +4,10 @@
 #include <cstdlib>
 #include <iostream>
 #include <limits>
+#include <stdexcept>
 #include <vector>
+
+#include "robot_nav_controller/utils.hpp"
 
 using robot_nav_controller::DepthParams;
 using robot_nav_controller::decode_16uc1;
@@ -22,6 +25,11 @@ bool near(double a, double b) { return std::abs(a - b) < 1e-6; }
 // the corridor (|4 * tan(angle)| <= 1); columns 0-2 and 6-8 are outside it.
 constexpr int kW = 9, kH = 20;
 std::vector<float> image(float fill) { return std::vector<float>(kW * kH, fill); }
+bool throws(const DepthParams& p) {
+    try { robot_nav_controller::validate_depth_params(p); } catch (const std::invalid_argument&) { return true; }
+    return false;
+}
+
 void set_column(std::vector<float>& img, int col, int row_from, int row_to, float d) {
     for (int r = row_from; r < row_to; ++r) img[r * kW + col] = d;
 }
@@ -73,6 +81,27 @@ int main() {
     // Compare as float: 65.535 has no exact float representation.
     check(metres.size() == 3 && metres[0] == 0.0f && metres[1] == 1.5f && metres[2] == 65.535f,
           "16UC1 millimetres decode to metres");
+
+    // Parameter validation: each rule rejects a bad value; the defaults pass.
+    check(!throws(p), "Default parameters are valid");
+    DepthParams bad = p;
+    bad.horizontal_fov = 0.0;
+    check(throws(bad), "Zero field of view throws");
+    bad = p;
+    bad.horizontal_fov = robot_nav_controller::kPi;
+    check(throws(bad), "Field of view of pi throws (tan of the edge angle blows up)");
+    bad = p;
+    bad.inflated_half_width = 0.0;
+    check(throws(bad), "Zero corridor half-width throws");
+    bad = p;
+    bad.min_valid_depth = -0.1;
+    check(throws(bad), "Negative min_valid_depth throws");
+    bad = p;
+    bad.min_valid_depth = 5.0;  // Equal to max: no depth could ever be valid.
+    check(throws(bad), "min_valid_depth >= max_valid_depth throws");
+    bad = p;
+    bad.max_valid_depth = std::numeric_limits<double>::infinity();
+    check(throws(bad), "Infinite max_valid_depth throws");
 
     std::cout << "Depth corridor unit tests passed\n";
 }

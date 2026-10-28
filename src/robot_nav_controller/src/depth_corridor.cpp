@@ -3,6 +3,10 @@
 #include <algorithm>
 #include <cmath>
 #include <cstddef>
+#include <stdexcept>
+#include <string>
+
+#include "robot_nav_controller/utils.hpp"
 
 namespace robot_nav_controller {
 
@@ -23,7 +27,26 @@ double percentile(std::vector<float>& values, double p) {
     return low + (rank - static_cast<double>(lo)) * (high - low);
 }
 
+void require(bool ok, const std::string& message) {
+    if (!ok) throw std::invalid_argument(message);
+}
+
 }  // namespace
+
+void validate_depth_params(const DepthParams& p) {
+    // tan(horizontal_fov / 2) gives the edge columns' angle, so the field of view
+    // must stay below pi (180 degrees), where tan blows up.
+    require(std::isfinite(p.horizontal_fov) && p.horizontal_fov > 0.0 && p.horizontal_fov < kPi,
+            "horizontal_fov must be in (0, pi), got " + std::to_string(p.horizontal_fov));
+    require(std::isfinite(p.inflated_half_width) && p.inflated_half_width > 0.0,
+            "inflated_half_width must be finite and > 0, got " +
+                std::to_string(p.inflated_half_width));
+    require(std::isfinite(p.min_valid_depth) && p.min_valid_depth >= 0.0,
+            "min_valid_depth must be finite and >= 0, got " + std::to_string(p.min_valid_depth));
+    require(std::isfinite(p.max_valid_depth) && p.max_valid_depth > p.min_valid_depth,
+            "max_valid_depth must be finite and > min_valid_depth, got " +
+                std::to_string(p.max_valid_depth));
+}
 
 double front_depth(const std::vector<float>& depth, int width, int height,
                    const DepthParams& params) {
